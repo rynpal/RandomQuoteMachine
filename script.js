@@ -11,6 +11,7 @@ const randomColorIndex = () => {
 };
 let newIndex = null;
 let colorIndex = null;
+
 //render quote and color to DOM
 const render = () => {
   let oldIndex = newIndex;
@@ -64,3 +65,5 @@ const quotes = {
   7: ['Convictions are not merely beliefs we hold; they are those beliefs that hold us in their grip.', 'Albert Mohler'],
   8: ['The concept of substitution lies at the heart of both sin and salvation. For the essence of sin is man substituting himself for God, while the essence of salvation is God substituting himself for man.', 'John Stott'],
   9: ["Christ did not die for any upon condition, if they do believe; but He died for all God's elect, that they should believe.", 'John Owen'] };
+
+// const quotes = $.get("https://type.fit/api/quotes");
