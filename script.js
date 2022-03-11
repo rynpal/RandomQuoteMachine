@@ -44,11 +44,12 @@ $(document).ready(function () {
   render();
 });
 
-//html styling/functionality
-$('#quote-box').addClass('mx-auto');
+//element styling/functionality
+
 $('#quote-container').addClass('d-flex flex-column justify-content-center align-items-center text-center');
 $('#text').css('padding', '10px').addClass('fst-italic fs-2');
 $('#author').css('padding', '5px').addClass('fs-4');
+
 $('#button-container').addClass('d-flex flex-row justify-content-center align-items-center');
 
 $('button').addClass('btn btn-success text-uppercase').
