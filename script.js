@@ -24,7 +24,7 @@ const render = () => {
 $('body').animate({ backgroundColor: colors[colorIndex] }, 'slow');
 
 //change quote
-  $('#quote-container').fadeOut(function () {
+  $('#quote-container').fadeOut('slow',function () {
 
     $.get("https://type.fit/api/quotes",function (data) {
       let index = data[randomQuoteIndex(data)]
@@ -36,7 +36,7 @@ $('body').animate({ backgroundColor: colors[colorIndex] }, 'slow');
       }
     },"JSON")
     
-  }).fadeIn();
+  }).fadeIn('slow');
 };
 
 //render on document open
