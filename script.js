@@ -1,3 +1,8 @@
+//render on document open
+$(document).ready(function () {
+  render();
+});
+
 //random quote index function
 const randomQuoteIndex = (obj) => {
   return Math.floor(Math.random() * Object.keys(obj).length);
@@ -51,30 +56,9 @@ const render = () => {
         "JSON"
       );
     })
+    .delay(600)
     .fadeIn("slow");
 };
 
-//render on document open
-$(document).ready(function () {
-  render();
-});
-
-//element styling/functionality
-
-$("#quote-container").addClass(
-  "d-flex flex-column justify-content-center align-items-center text-center"
-);
-$("#text").css("padding", "10px").addClass("fst-italic fs-2");
-$("#author").css("padding", "5px").addClass("fs-4");
-
-$("#button-container").addClass(
-  "d-flex flex-row justify-content-center align-items-center"
-);
-
-$("button").addClass("btn btn-success text-uppercase").on("click", render);
-
-$("a")
-  .addClass("btn btn-primary")
-  .css("margin", "10px")
-  .attr("href", "https://twitter.com/intent/tweet", "target", "_top");
-$("i").addClass("bi bi-twitter");
+//add button click functionality
+$("button").on("click", render);
